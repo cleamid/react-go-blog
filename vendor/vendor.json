@@ -33,8 +33,16 @@
 			"versionExact": "v1.2"
 		},
 		{
+			"checksumSHA1": "HmbftipkadrLlCfzzVQ+iFHbl6g=",
+			"path": "github.com/golang/glog",
+			"revision": "23def4e6c14b4da8ac2ed8007337bc5eb5007998",
+			"revisionTime": "2016-01-25T20:49:56Z"
+		},
+		{
+			"checksumSHA1": "yqF125xVSkmfLpIVGrLlfE05IUk=",
 			"path": "github.com/golang/protobuf/proto",
-			"revision": ""
+			"revision": "1e59b77b52bf8e4b449a57e6f79f21226d571845",
+			"revisionTime": "2017-11-13T18:07:20Z"
 		},
 		{
 			"checksumSHA1": "w5RcOnfv5YDr3j2bd1YydkPiZx4=",
@@ -43,10 +51,26 @@
 			"revisionTime": "2017-11-07T05:05:31Z"
 		},
 		{
+			"checksumSHA1": "FdCoXujHIVFbxS7lIYx0U3YTuNQ=",
+			"path": "github.com/szuecs/gin-glog",
+			"revision": "da59244bde84149ae00db0c2b8e62b9d899e6993",
+			"revisionTime": "2017-09-05T21:23:50Z"
+		},
+		{
 			"checksumSHA1": "0SevR0Z/jL+X5oA1szjY1aVkttI=",
 			"path": "github.com/ugorji/go/codec",
 			"revision": "f0aa215a7d653544d39d0e27dfa10fa4b183f397",
 			"revisionTime": "2017-12-03T09:13:13Z"
+		},
+		{
+			"checksumSHA1": "yPirakRGlgR6Ducff5O2RdCB9og=",
+			"path": "github.com/zalando/gin-oauth2",
+			"revision": "790abed9079f355d68860daab6d6f54c48e13499",
+			"revisionTime": "2017-08-23T07:45:39Z"
+		},
+		{
+			"path": "golang.org/x/oauth2",
+			"revision": ""
 		},
 		{
 			"path": "golang.org/x/sys/unix",
@@ -57,8 +81,10 @@
 			"revision": ""
 		},
 		{
+			"checksumSHA1": "fRgp9UZPllOlkPssv7frzQx4z9A=",
 			"path": "gopkg.in/yaml.v2",
-			"revision": ""
+			"revision": "287cf08546ab5e7e37d55a84f7ed3fd1db036de5",
+			"revisionTime": "2017-11-16T09:02:43Z"
 		}
 	],
 	"rootPath": "github.com/cleamid/react-go-blog"
