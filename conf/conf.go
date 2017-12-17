@@ -14,6 +14,13 @@ type Conf struct {
 	Host string
 	Port int
 	Prefix string
+	Db struct {
+		Host string
+		Port string
+		User string
+		Password string
+		Database string
+	}
 	Enable bool
 	Path string
 }

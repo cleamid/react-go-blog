@@ -1,31 +1,32 @@
 package db
 
-var sql = `CREATE DATABASE IF NOT EXISTS blog DEFAULT CHARACTER SET = ‘utf8’ DEFAULT COLLATE ‘utf8_general_ci’;
+import (
+    "time"
+    "fmt"
+)
 
-USE blog;
+type JsonTime time.Time
 
-— —
-— Table ‘user’
-—
-— —
+func (t *JsonTime) MarshalJSON() ([]byte, error) {
+    st := fmt.Sprintf(`"%s"`, time.Time(*t).Local().Format(timeFormart))
+    return []byte(st), nil
+}
 
-CREATE TABLE IF NOT EXISTS user (
-id INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-username VARCHAR(255) NOT NULL,
-password VARCHAR(32) NULL DEFAULT NULL,
-isSuper TINYINT NULL DEFAULT NULL,
-nickname VARCHAR(255) NULL DEFAULT NULL,
-avatar VARCHAR(255) NULL DEFAULT NULL,
-email VARCHAR(255) NULL DEFAULT NULL,
-qq VARCHAR(255) NULL DEFAULT NULL,
-wechat VARCHAR(255) NULL DEFAULT NULL,
-ctime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-ltime DATETIME NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-PRIMARY KEY (id),
-UNIQUE KEY username (username),
-UNIQUE KEY email (email)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+type User struct {
+    Id             uint64    `json:"id"`
+    Username     string    `json:"username"`
+    Password     string    `json:"-"`
+    IsSuper     bool    `json:"-"`
+    Nickname     string    `json:"nickname"`
+    Avatar         string    `json:"avatar"`
+    Email         string    `json:"email"`
+    QQ             string    `json:"qq"`
+    WeChat         string    `json:"wechat"`
+    CTime         JsonTime    `json:"cTime"`
+    LTime         JsonTime    `json:"lTime"`
+}
 
+var stmt = `
 — —
 — Table ‘topic’
 —

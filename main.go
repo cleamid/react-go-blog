@@ -11,6 +11,7 @@ import (
 
 func main() {
 	c := conf.GetConf()
+	fmt.Println(c)
 	r := router.SetupRouter()
 
 	glog.Warning("warning")
