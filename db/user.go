@@ -4,7 +4,7 @@ import (
     "database/sql"
     "github.com/go-sql-driver/mysql"
     "fmt"
-    "github.com/golang/glog"
+    //"github.com/golang/glog"
 )
 
 var userTableCreateStatement =
@@ -173,7 +173,7 @@ func (db *userStmt) SelectById(id uint64) (*User, error) {
     if err != nil {
         return nil, fmt.Errorf("mysql: could not get user: %v", err)
     }
-    glog.Info(fmt.Sprintf("%+v", user))
+    //glog.Info(fmt.Sprintf("%+v", user))
     return user, nil
 }
 
